@@ -1,6 +1,6 @@
 <cffunction name="display" access="remote">
-      <cfargument  name="row_no">           
-      <cfset nArray=arrayNew(1)>
+      <cfargument  name="row_no" type="string" required="true">           
+      <cfset local.nArray=arrayNew(1)>
       <cfset session.fArray=nArray>
       <cfif isNumeric(row_no)>
           <cfloop from ="1" to =#row_no# index="i">
